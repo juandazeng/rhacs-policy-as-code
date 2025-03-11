@@ -1,9 +1,9 @@
 kind: SecurityPolicy
 apiVersion: config.stackrox.io/v1alpha1
 metadata:
-  name: netcat-in-image
+  name: netcat-in-image2
 spec:
-  policyName: Netcat in Image
+  policyName: Netcat in Image 2
   categories:
   - Package Management
   description: 'This policy checks for container images containing netcat'

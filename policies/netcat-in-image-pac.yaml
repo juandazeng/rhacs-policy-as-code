@@ -7,7 +7,6 @@ spec:
   categories:
   - Package Management
   description: 'This policy checks for container images containing netcat'
-  disabled: false
   enforcementActions:
     - SCALE_TO_ZERO_ENFORCEMENT
     - FAIL_BUILD_ENFORCEMENT
@@ -22,7 +21,6 @@ spec:
     policyGroups:
     - fieldName: Image Component
       booleanOperator: OR
-      negate: false
       values:
       - value: nmap-ncat=
   rationale: Netcat potentially allows attackers to move laterally, and access external

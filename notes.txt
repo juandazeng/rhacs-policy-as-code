@@ -7,6 +7,7 @@ In ArgoCD instance YAML, add:
     policy: |
       g, localadmins, role:admin
 
+oc adm policy add-role-to-user admin system:serviceaccount:openshift-gitops:openshift-gitops-argocd-application-controller -n stackrox
 
 export ROX_ENDPOINT=central-stackrox.apps.cluster-z7gsp.z7gsp.sandbox2129.opentlc.com:443
 

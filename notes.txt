@@ -17,4 +17,6 @@ roxctl --insecure-skip-tls-verify image check --endpoint $ROX_ENDPOINT --image q
 
 roxctl --insecure-skip-tls-verify image check --endpoint $ROX_ENDPOINT --image docker.io/piesecurity/apache-struts2-cve-2017-5638
 
-
+If SecurityPolicy deletion gets stuck in Progressing, remove the finalizer as follows:
+  oc patch -n stackrox sp/nameofsecuritypolicy --type=merge -p '{"metadata": {"finalizers":null}}'
+This will delete the resource
